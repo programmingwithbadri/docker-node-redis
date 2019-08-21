@@ -1,0 +1,8 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    build: . # . implies that dockerfile in current directory
+    ports:
+      - "192.168.99.100:4001:8080" # 192.168.99.100 is the docker-machine ip. wont be used when we deploy outside computer
